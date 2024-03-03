@@ -59,25 +59,25 @@ app.listen(8080);
     - **You must delete the `node_modules` folder before submitting your work.**
     - **You must add a `.gitignore` file to your project and include `node_modules` in it if you are pushing your work to GitHub.**
 9. Type `npm start` and press Enter to start your server. Once it's running, you will not get any output in the terminal. You can open your browser and go to `http://localhost:8080` to see your page. End the server by pressing `Ctrl+C` in the terminal.
-10. You may get an error message similar to what is shown below:
-```
+10. You may get an error message saying something like:
+`
 (node:47780) Warning: To load an ES module, set "type": "module" in the package.json or use the .mjs extension.
-```
-If you do, you need to change the `type` in the `package.json` file to `"type": "module"`. You need to add a new line to the `package.json` file so that it looks like this:
+`
+If you do, you need to change the `type` in the `package.json` file to `"type": "module"`. You need to add a new line to the `package.json` file so that it looks similar to this:
 ```json
 {
   "name": "your-project-name",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
-  "type": "module", // Add this line
+  "type": "module", // Add this line (remove this comment after adding it!)
   "scripts": {
-    "start": "node server.js" // Make sure this matches the name of your server file
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1" // This number may be different for you
+    "express": "^4.17.1"
   }
 }
 ```
