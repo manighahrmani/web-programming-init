@@ -35,7 +35,7 @@ your-project-name/
 ```html
 <!doctype html>
 <meta charset=utf-8>
-<script defer src="index.js"></script> <!-- Make sure this matches the name of your JavaScript file in the public/client folder -->
+<script defer src="index.js"></script> <!-- Matches the name of the .js file in the public/client folder -->
 <title>Message Board</title> <!-- Change this to the title of your page -->
 
 <h1>Message Board</h1> <!-- Change these too ... -->
@@ -44,21 +44,21 @@ your-project-name/
   <li>Until then we can dream.</li>
 </ul>
 ```
-The same goes for your server file. In the example below, our `server.js` file is serving the `public` folder over port 8080.
-```javascript
-import express from "express";
+   The same goes for your server file. In the example below, our `server.js` file is serving the `public` folder over port 8080.
+  ```javascript
+  import express from "express";
 
-const app = express();
-app.use(express.static("public"));
-app.listen(8080);
-```
+  const app = express();
+  app.use(express.static("public"));
+  app.listen(8080);
+  ```
 5. Open the terminal in Visual Studio Code with `Terminal > New Terminal`.
 6. Type `npm init -y` and press Enter to create a new `package.json` file.
 7. Change the `scripts` section of the `package.json` file to include `"start": "node server.js"`. Make sure the second part matches the name of your server file (e.g., change it to `svr.js` if that's what you called it).
 8. Type `npm install express` and press Enter to install the Express module. This creates a `node_modules` folder and a `package-lock.json` file.
     - **You must delete the `node_modules` folder before submitting your work.**
     - **You must add a `.gitignore` file to your project and include `node_modules` in it if you are pushing your work to GitHub.**
-9. Type `npm start` and press Enter to start your server. Once it's running, you will not get any output in the terminal. You can open your browser and go to `http://localhost:8080` to see your page. End the server by pressing `Ctrl+C` in the terminal.
+9. Type `npm start` and press Enter to start your server. Once it's running, you will not get any output in the terminal.
 10. You may get an error message saying something like:
 `
 (node:47780) Warning: To load an ES module, set "type": "module" in the package.json or use the .mjs extension.
@@ -81,3 +81,4 @@ If you do, you need to change the `type` in the `package.json` file to `"type": 
   }
 }
 ```
+11. Open your browser and go to `http://localhost:8080` to see your page (the number at the end corresponds to the port number you have in your server). End the server by pressing `Ctrl+C` in the terminal.
